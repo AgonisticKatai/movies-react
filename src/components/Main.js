@@ -1,20 +1,16 @@
 import React from 'react'
 import { Switch, Route } from 'react-router-dom'
 
-import home from './routes/root/home'
-import popular from './routes/root/popular'
-import upcoming from './routes/root/upcoming'
-import nowPlaying from './routes/root/nowPlaying'
-import topRated from './routes/root/topRated'
+import ShowMovies from './routes/root/ShowMovies'
 
 const Main = () => (
   <div className="Main">
     <Switch>
-      <Route exact path='/' component={home} />
-      <Route path='/popular' component={popular} />
-      <Route path='/upcoming' component={upcoming} />
-      <Route path='/nowPlaying' component={nowPlaying} />
-      <Route path='/topRated' component={topRated} />
+      <Route exact path='/' render={() => (<ShowMovies category={'popular'} />)} />
+      <Route path='/popular' render={() => (<ShowMovies category={'popular'} />)} />
+      <Route path='/upcoming' render={() => (<ShowMovies category={'upcoming'} />)} />
+      <Route path='/now_playing' render={() => (<ShowMovies category={'now_playing'} />)} />
+      <Route path='/top_rated' render={() => (<ShowMovies category={'top_rated'} />)} />
     </Switch>
   </div>
 )
