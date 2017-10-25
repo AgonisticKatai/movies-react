@@ -1,10 +1,37 @@
 .thumbnail {
   height: 500px;
+  cursor: pointer;
 }
 
 h3 {
+  color: #4e4fb2;
   margin-top: 10px;
 }
 
 p {
+  color: #7b809d;
+}
+
+@media (min-width: 450px) {
+  .thumbnail {
+    height: 660px;
+  }
+}
+
+@media (min-width: 768px) {
+  .thumbnail {
+    height: 630px;
+  }
+}
+
+@media (min-width: 992px) {
+  .thumbnail {
+    height: 430px;
+  }
+}
+
+@media (min-width: 1200px) {
+  .thumbnail {
+    height: 500px;
+  }
 }

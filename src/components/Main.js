@@ -4,9 +4,9 @@ import { Switch, Route } from 'react-router-dom'
 import ShowMovies from './routes/root/ShowMovies'
 
 const Main = () => (
-  <div className="Main">
+  <div className='Main'>
     <Switch>
-      <Route exact path='/' render={() => (<ShowMovies category={'popular'} />)} />
+      <Route exact path='/' render={() => (<ShowMovies category={'home'} />)} />
       <Route path='/popular' render={() => (<ShowMovies category={'popular'} />)} />
       <Route path='/upcoming' render={() => (<ShowMovies category={'upcoming'} />)} />
       <Route path='/now_playing' render={() => (<ShowMovies category={'now_playing'} />)} />

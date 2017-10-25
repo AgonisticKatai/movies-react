@@ -9,15 +9,15 @@ class ShowMovies extends Component {
     super(props)
     this.state = {
       movies: [{
-      poster_path: '',
-      title: '',
-      release_date: ''
+        poster_path: '',
+        title: '',
+        release_date: ''
       }]
     }
   }
 
-  componentWillReceiveProps () {
-    getMoviesData(this.props.category)
+  componentWillReceiveProps (props) {
+    getMoviesData(props.category)
     .then(data => {
       this.setState({
         movies: data.results.map(function (movies) {
@@ -53,7 +53,7 @@ class ShowMovies extends Component {
           {this.state.movies.map(function (movie) {
             return (
               <Col xs={12} sm={6} md={3}>
-                <Thumbnail src={"https://image.tmdb.org/t/p/w370_and_h556_bestv2/" + movie.poster_path} alt={movie.title}>
+                <Thumbnail src={'https://image.tmdb.org/t/p/w370_and_h556_bestv2/' + movie.poster_path} alt={movie.title}>
                   <h3>{movie.title}</h3>
                   <p>Release date: <strong>{movie.release_date}</strong></p>
                 </Thumbnail>

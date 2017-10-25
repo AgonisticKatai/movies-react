@@ -1,13 +1,15 @@
 import React from 'react'
-import { Link } from 'react-router-dom'
+
 import { LinkContainer } from 'react-router-bootstrap'
-import { Nav, NavItem, Navbar }  from 'react-bootstrap'
+import { Nav, NavItem, Navbar } from 'react-bootstrap'
+
+import './Header.css'
 
 const Header = () => (
-  <Navbar inverse collapseOnSelect>
+  <Navbar inverse collapseOnSelect className="nav-selector">
     <Navbar.Header>
       <LinkContainer to='/'>
-        <Navbar.Brand>Movie Collection</Navbar.Brand>
+        <Navbar.Brand className="nav-title">Movie Collection</Navbar.Brand>
       </LinkContainer>
       <Navbar.Toggle />
     </Navbar.Header>
